@@ -70,17 +70,25 @@ body {
   height: 5000px;
 }
 
-.primary-btn {
+.btn, .secondary-btn, .primary-btn {
   cursor: pointer;
-  background-color: transparent;
   text-transform: uppercase;
-  border: 2px solid var(--yellow);
-  color: white;
   letter-spacing: 3px;
   text-decoration: none;
   border-radius: 30px;
   padding: 10px 25px;
   transition: all 500ms ease-out;
+}
+@media screen and (max-width: 576px) {
+  .btn, .secondary-btn, .primary-btn {
+    padding: 8px 20px;
+  }
+}
+
+.primary-btn {
+  background-color: transparent;
+  border: 2px solid var(--yellow);
+  color: white;
 }
 .primary-btn:hover {
   background-color: var(--yellow);
@@ -88,16 +96,9 @@ body {
 }
 
 .secondary-btn {
-  cursor: pointer;
   background-color: var(--raisin);
-  text-transform: uppercase;
   border: 2px solid var(--axolo);
   color: white;
-  letter-spacing: 3px;
-  text-decoration: none;
-  border-radius: 30px;
-  padding: 10px 25px;
-  transition: all 500ms ease-out;
 }
 .secondary-btn:hover {
   background-color: var(--axolo);
@@ -156,23 +157,19 @@ section.overlayed::before {
 
 #hero {
   min-height: 100vh;
-  background-repeat: no-repeat;
-  background-position: 100% 100%;
-  background-size: cover;
+  overflow: hidden;
 }
 #hero video {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  transform: translate(-50%, -50%);
+  width: 100%;
   z-index: -2;
 }
 @media screen and (max-width: 576px) {
   #hero video {
+    left: 50%;
+    top: 50%;
     transform: translate(-50%, -50%) rotate(90deg);
     width: auto;
     height: 100%;
@@ -201,30 +198,30 @@ section.overlayed::before {
   }
 }
 
-#about {
+#about-us {
   background-image: url("../images/about-bg.jpg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
 }
-#about p {
+#about-us p {
   font-size: 16px;
 }
 @media screen and (max-width: 576px) {
-  #about p {
+  #about-us p {
     font-size: 14px;
   }
 }
-#about .about-img {
+#about-us .about-img {
   position: relative;
   transition: 0.5s;
 }
-#about .about-img img {
+#about-us .about-img img {
   max-width: 100%;
   border: 4px solid rgba(255, 255, 255, 0.2);
   position: relative;
 }
-#about .about-img::before {
+#about-us .about-img::before {
   position: absolute;
   left: 20px;
   top: 20px;
@@ -236,7 +233,7 @@ section.overlayed::before {
   border-top: 5px solid var(--yellow);
   transition: 0.5s;
 }
-#about .about-img::after {
+#about-us .about-img::after {
   position: absolute;
   right: 20px;
   bottom: 20px;
@@ -248,40 +245,40 @@ section.overlayed::before {
   border-bottom: 5px solid var(--yellow);
   transition: 0.5s;
 }
-#about .about-img:hover {
+#about-us .about-img:hover {
   transform: scale(1.03);
 }
-#about .about-img::before {
+#about-us .about-img::before {
   left: 10px;
   top: 10px;
 }
-#about .about-img::after {
+#about-us .about-img::after {
   right: 10px;
   bottom: 10px;
 }
 
-#menu .filters {
+#menus .filters {
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
   justify-content: space-evenly;
 }
-#menu .items {
+#menus .items {
   position: relative;
 }
-#menu .items .item {
+#menus .items .item {
   position: absolute;
 }
-#menu .items .card {
+#menus .items .card {
   background-color: transparent;
   border: none;
 }
-#menu .items .card .card-title {
+#menus .items .card .card-title {
   font-size: 1.5rem;
   font-weight: 700;
   color: white;
 }
-#menu .items .card .card-text {
+#menus .items .card .card-text {
   font-size: 1rem;
   color: var(--yellow);
 }
@@ -311,7 +308,7 @@ section.overlayed::before {
   }
 }
 
-#reservation form {
+#reservations form {
   padding: 20px;
   border-radius: 10px;
 }
@@ -320,9 +317,38 @@ section.overlayed::before {
   background-color: var(--dark-lava);
   border: none;
 }
+#testimoni .card .card-body {
+  position: relative;
+  padding-bottom: 60px;
+}
 #testimoni .card .card-title {
   font-size: 1.5rem;
   font-weight: 700;
+  color: white;
+}
+#testimoni .card .avatar {
+  position: absolute;
+  bottom: -55%;
+  left: 50%;
+  transform: translate(-50%);
+}
+#testimoni .card .avatar img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin-bottom: 16px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (max-width: 576px) {
+  #testimoni .card .avatar img {
+    width: 70px;
+    height: 70px;
+  }
+}
+#testimoni .card .avatar h5 {
+  text-align: center;
+  font-size: 18px;
   color: white;
 }
 #testimoni .card .card-text {

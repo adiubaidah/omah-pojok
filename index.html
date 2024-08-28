@@ -36,56 +36,55 @@
     <link rel="stylesheet" href="assets/style.css" />
   </head>
 
-  <div id="main-wrap"></div>
   <body>
-    <div id="main">
-      <!-- Navbar -->
-      <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container py-3">
-          <a class="navbar-brand" href="#">Logo</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#about">Tentang Kami</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#menu">Menu</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#reservation">Reservasi</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#contact">Kontak</a>
-              </li>
-            </ul>
-            <ul class="navbar-nav ms-auto reservation">
-              <li class="nav-item">
-                <a class="primary-btn" href="#">Reservasi</a>
-              </li>
-            </ul>
-          </div>
+    <!-- Navbar -->
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark">
+      <div class="container py-3">
+        <a class="navbar-brand" href="#">Logo</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#hero">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about-us">Tentang Kami</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#menus">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#reservations">Reservasi</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Kontak</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav ms-auto reservation">
+            <li class="nav-item">
+              <a class="btn primary-btn" href="#">Reservasi</a>
+            </li>
+          </ul>
         </div>
-      </nav>
-      <!-- End Navbar -->
+      </div>
+    </nav>
+    <!-- End Navbar -->
+    <div id="main" data-bs-spy="scroll" data-bs-target="navbar" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true">
 
       <!-- Hero -->
       <section id="hero" class="d-flex align-items-center overlayed">
         <video autoplay muted loop class="position-absolute">
-          <source src="/assets/hero.mp4">
+          <source src="/assets/hero.mp4" />
         </video>
         <div class="container z-2">
           <div class="row">
@@ -100,12 +99,12 @@
               <div class="mt-4 d-flex align-items-center">
                 <a
                   href="#menu"
-                  class="primary-btn animate__animated animate__fadeInUp"
+                  class="btn primary-btn animate__animated animate__fadeInUp"
                   >Lihat Menu</a
                 >
                 <a
                   href="#menu"
-                  class="primary-btn animate__animated animate__fadeInUp ms-3"
+                  class="btn primary-btn animate__animated animate__fadeInUp ms-3"
                   >Pesan Tempat</a
                 >
               </div>
@@ -116,7 +115,7 @@
       <!-- End Hero -->
 
       <!-- About -->
-      <section id="about" class="py-5 overlayed">
+      <section id="about-us" class="py-5 overlayed">
         <div class="container z-2">
           <div class="row">
             <div class="col-lg-6">
@@ -167,21 +166,21 @@
       <!-- End About -->
 
       <!-- Menu -->
-      <section id="menu" class="py-5">
+      <section id="menus" class="py-5">
         <div class="container z-2">
           <h2 class="text-center">Menu Kami</h2>
           <div class="filters mt-3">
             <button
               type="button"
-              class="secondary-btn active"
+              class="btn secondary-btn active"
               data-filter="semua"
             >
               Semua
             </button>
-            <button type="button" class="secondary-btn" data-filter="makanan">
+            <button type="button" class="btn secondary-btn" data-filter="makanan">
               Makanan
             </button>
-            <button type="button" class="secondary-btn" data-filter="minuman">
+            <button type="button" class="btn secondary-btn" data-filter="minuman">
               Minuman
             </button>
           </div>
@@ -412,7 +411,7 @@
       </section>
       <!-- End Ads -->
       <!-- Reservation -->
-      <section id="reservation" class="py-5">
+      <section id="reservations" class="py-5">
         <div class="container">
           <h2 class="text-center">Sewa Tempat</h2>
           <form action="">
@@ -470,8 +469,10 @@
               </div>
             </div>
             <div class="row justify-content-center mt-3">
-              <div class="col-1">
-                <button class="secondary-btn" type="submit">Pesan</button>
+              <div class="col d-flex">
+                <button class="btn secondary-btn mx-auto" type="submit">
+                  Pesan
+                </button>
               </div>
             </div>
           </form>
@@ -480,7 +481,7 @@
       <!-- End Reservation -->
       <!-- Gallery -->
       <section id="gallery" class="py-5">
-        <div class="container z-2">
+        <div class="container-fluid z-2">
           <h2 class="text-center">Gallery</h2>
           <div class="gallery mt-4">
             <a
@@ -541,7 +542,7 @@
           <h2 class="text-center">Testimoni</h2>
           <div class="swiper mt-4">
             <div class="swiper-wrapper">
-              <div class="swiper-slide">
+              <div class="swiper-slide" style="height: 280px">
                 <div class="card w-full">
                   <div class="card-body">
                     <p class="card-text">
@@ -550,12 +551,16 @@
                       Cocok untuk kumpul keluarga atau meeting bisnis.
                       <i class="fa-solid fa-quote-right"></i>
                     </p>
-
-                    <h5 class="card-title">John Doe</h5>
+                  </div>
+                  <div>
+                    <div class="avatar">
+                      <img src="/images/manager-1.jpg" alt="" />
+                      <h5>Ilham</h5>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="swiper-slide">
+              <div class="swiper-slide" style="height: 280px">
                 <div class="card w-full">
                   <div class="card-body">
                     <p class="card-text">
@@ -564,12 +569,16 @@
                       Cocok untuk kumpul keluarga atau meeting bisnis.
                       <i class="fa-solid fa-quote-right"></i>
                     </p>
-
-                    <h5 class="card-title">John Doe</h5>
+                  </div>
+                  <div>
+                    <div class="avatar">
+                      <img src="/images/manager-1.jpg" alt="" />
+                      <h5>Ilham</h5>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="swiper-slide">
+              <div class="swiper-slide" style="height: 280px">
                 <div class="card w-full">
                   <div class="card-body">
                     <p class="card-text">
@@ -578,12 +587,16 @@
                       Cocok untuk kumpul keluarga atau meeting bisnis.
                       <i class="fa-solid fa-quote-right"></i>
                     </p>
-
-                    <h5 class="card-title">John Doe</h5>
+                  </div>
+                  <div>
+                    <div class="avatar">
+                      <img src="/images/manager-1.jpg" alt="" />
+                      <h5>Ilham</h5>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="swiper-slide">
+              <div class="swiper-slide" style="height: 280px">
                 <div class="card w-full">
                   <div class="card-body">
                     <p class="card-text">
@@ -592,8 +605,12 @@
                       Cocok untuk kumpul keluarga atau meeting bisnis.
                       <i class="fa-solid fa-quote-right"></i>
                     </p>
-
-                    <h5 class="card-title">John Doe</h5>
+                  </div>
+                  <div>
+                    <div class="avatar">
+                      <img src="/images/manager-1.jpg" alt="" />
+                      <h5>Ilham</h5>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -624,7 +641,8 @@
                 <div class="text-center description" style="width: 284px">
                   <p class="fw-bold fs-4">Iqbal</p>
                   <p>
-                    Pengusaha Sukses yang memiliki passion di dunia kuliner, seperti memelihara ikan KOI.
+                    Pengusaha Sukses yang memiliki passion di dunia kuliner,
+                    seperti memelihara ikan KOI.
                   </p>
                 </div>
               </div>
@@ -635,7 +653,6 @@
       <!-- End Manager -->
 
       <!-- Contact -->
-
       <section id="contact" class="py-5">
         <div class="container z-2">
           <h2 class="text-center">Hubungi Kami</h2>
@@ -743,7 +760,7 @@
                   </div>
                   <div class="col-12">
                     <div class="form-group">
-                      <button class="secondary-btn" type="submit">Kirim</button>
+                      <button class="btn secondary-btn" type="submit">Kirim</button>
                     </div>
                   </div>
                 </div>
@@ -755,7 +772,7 @@
       <!-- End Contact -->
 
       <footer>
-        <div class="container">
+        <div class="container py-5">
           <div class="row">
             <div class="col-lg-6">
               <h6>LOGO</h6>
@@ -769,28 +786,27 @@
                 <li>
                   <strong> No Telepon </strong> : <span>0812-8830-810</span>
                 </li>
-                <li><strong> Email </strong> : <span>iqbal.ardy74@gmail.com</span></li>
+                <li>
+                  <strong> Email </strong> : <span>iqbal.ardy74@gmail.com</span>
+                </li>
               </ul>
 
               <ul class="d-flex icons mt-3">
                 <li>
                   <a
                     href="https://www.instagram.com/omahpojok.official?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                    target="_blank"
                   >
                     <i class="fa-brands fa-instagram"></i>
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="https://www.facebook.com/p/Koi-Tapal-Kuda-313-100064089698281/?locale=ms_MY"
-                  >
+                  <a href="https://www.facebook.com/omahpojoklumajangkota/" target="_blank">
                     <i class="fa-brands fa-facebook-f"></i>
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="https://www.youtube.com/@koitapalkuda"
-                  >
+                  <a href="https://www.youtube.com/@koitapalkuda" target="_blank">
                     <i class="fa-brands fa-youtube"></i>
                   </a>
                 </li>
@@ -813,6 +829,17 @@
                   <a href="#reservation" class="nav-link">Reservasi</a>
                 </li>
               </ul>
+            </div>
+          </div>
+        </div>
+
+        <div style="background-color: black; padding: 30px">
+          <div class="container">
+            <div class="row justify-content-center">
+              <p class="text-white">
+                &copy; CopyRight 2024 <strong> Omah Pojok KOI</strong>. 
+              </p>
+              <small>All Rights Reserved</small>
             </div>
           </div>
         </div>
