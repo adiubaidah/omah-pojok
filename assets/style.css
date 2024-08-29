@@ -81,6 +81,7 @@ body {
 }
 @media screen and (max-width: 576px) {
   .btn, .secondary-btn, .primary-btn {
+    font-size: 14px;
     padding: 8px 20px;
   }
 }
@@ -149,7 +150,7 @@ section.overlayed::before {
 }
 
 .swiper-pagination .swiper-pagination-bullet {
-  top: -200px;
+  background-color: white;
 }
 .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background-color: var(--yellow);
@@ -299,11 +300,11 @@ section.overlayed::before {
   -o-object-fit: cover;
      object-fit: cover;
 }
-#ads p {
+#ads p, #ads li {
   font-size: 16px;
 }
 @media screen and (max-width: 576px) {
-  #ads p {
+  #ads p, #ads li {
     font-size: 14px;
   }
 }
@@ -328,7 +329,7 @@ section.overlayed::before {
 }
 #testimoni .card .avatar {
   position: absolute;
-  bottom: -55%;
+  bottom: -50%;
   left: 50%;
   transform: translate(-50%);
 }
@@ -459,4 +460,18 @@ footer .icons a:hover {
 }
 footer .icons a i {
   font-size: 18px;
+}
+footer .nav-item {
+  margin-bottom: 19px;
+}
+footer .nav-item i {
+  color: var(--yellow);
+  font-size: 14px;
+}
+footer .nav-item .nav-link {
+  font-size: 14px;
+  text-decoration: none;
+}
+footer .nav-item .nav-link:hover {
+  color: var(--yellow);
 }

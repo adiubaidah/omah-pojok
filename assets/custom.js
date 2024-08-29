@@ -1,4 +1,11 @@
 $(document).ready(function () {
+  AOS.init({
+    duration: 400, // values from 0 to 3000, with step 50ms
+    once: true,
+    startEvent: "DOMContentLoaded",
+    offset: 120,
+  });
+
   window.addEventListener("scroll", function () {
     const navbar = $(".navbar");
     if (window.scrollY > 100) {
@@ -15,7 +22,6 @@ $(document).ready(function () {
   const buttonFilters = $(".filters button");
   buttonFilters.each(function () {
     $(this).on("click", function () {
-
       buttonFilters.removeClass("active");
       $(this).addClass("active");
 
@@ -28,12 +34,12 @@ $(document).ready(function () {
     });
   });
 
-  const swiper = new Swiper('.swiper', {
+  const swiper = new Swiper(".swiper", {
     loop: true,
     slidesPerView: 1, // Default value
     spaceBetween: 30,
     pagination: {
-      el: '.swiper-pagination',
+      el: ".swiper-pagination",
       clickable: true,
     },
     breakpoints: {
@@ -46,8 +52,5 @@ $(document).ready(function () {
         slidesPerView: 3,
       },
     },
-  })
-
-
-  
+  });
 });

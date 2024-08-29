@@ -80,7 +80,7 @@ body {
   transition: all 500ms ease-out;
 
   @media screen and (max-width: $mobile) {
-    
+    font-size: 14px;
     padding: 8px 20px;
   }
 }
@@ -158,7 +158,7 @@ section {
 
 .swiper-pagination {
   .swiper-pagination-bullet {
-    top: -200px;
+    background-color: white;
     &.swiper-pagination-bullet-active {
       background-color: var(--yellow);
     }
@@ -309,7 +309,7 @@ section {
       object-fit: cover;
     }
   }
-  p {
+  p, li {
     font-size: 16px;
     @media screen and (max-width: $mobile) {
       font-size: 14px;
@@ -339,7 +339,7 @@ section {
     }
     .avatar {
       position: absolute;
-      bottom: -55%;
+      bottom: -50%;
       img {
         width: 90px;
         height: 90px;
@@ -482,6 +482,22 @@ footer {
       }
       i {
         font-size: 18px;
+      }
+    }
+  }
+
+
+  .nav-item {
+    margin-bottom: 19px;
+    i {
+      color: var(--yellow);
+      font-size: 14px;
+    }
+    .nav-link {
+      font-size: 14px;
+      text-decoration: none;
+      &:hover {
+        color: var(--yellow);
       }
     }
   }
