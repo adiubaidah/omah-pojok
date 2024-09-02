@@ -166,6 +166,9 @@ section.overlayed::before {
      object-fit: cover;
   width: 100%;
   z-index: -2;
+  transform: rotate(90deg);
+  right: -25%;
+  top: 0;
 }
 @media screen and (max-width: 576px) {
   #hero video {

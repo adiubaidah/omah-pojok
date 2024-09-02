@@ -1,9 +1,9 @@
 $(document).ready(function () {
   AOS.init({
-    duration: 400, // values from 0 to 3000, with step 50ms
+    duration: 700, // values from 0 to 3000, with step 50ms
     once: true,
     startEvent: "DOMContentLoaded",
-    offset: 120,
+    offset: 50,
   });
 
   window.addEventListener("scroll", function () {
