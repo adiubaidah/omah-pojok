@@ -81,8 +81,8 @@ body {
 }
 @media screen and (max-width: 576px) {
   .btn, .secondary-btn, .primary-btn {
-    font-size: 14px;
-    padding: 8px 20px;
+    font-size: 13px;
+    padding: 6px 16px;
   }
 }
 
@@ -189,7 +189,7 @@ section.overlayed::before {
 }
 @media screen and (max-width: 576px) {
   #hero h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
 #hero p {
@@ -438,6 +438,12 @@ section.overlayed::before {
   line-height: 0;
   color: var(--axolo);
   text-decoration: none;
+}
+@media screen and (max-width: 576px) {
+  #contact li:first-child .icon {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 footer li {
