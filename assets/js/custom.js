@@ -6,6 +6,20 @@ $(document).ready(function () {
     offset: 50,
   });
 
+  $('#read-more-btn').click(function() {
+    $('#more-text').slideDown();
+    $('#more-text-2').slideDown();
+    $('#read-more-btn').hide();
+    $('#read-less-btn').show();
+  });
+
+  $('#read-less-btn').click(function() {
+    $('#more-text').slideUp();
+    $('#more-text-2').slideUp();
+    $('#read-more-btn').show();
+    $('#read-less-btn').hide();
+  });
+  
   window.addEventListener("scroll", function () {
     const navbar = $(".navbar");
     if (window.scrollY > 100) {
