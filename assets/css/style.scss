@@ -37,18 +37,26 @@ button {
   --dark-lava: #454137;
 }
 
-.form-control {
-  outline: none !important;
+input, textarea {
+  outline: none;
   background-color: #0c0b09;
-  color: white !important;
+  color: white;
+  font-size: 14px;
+  padding: 10px 15px;
   border: 2px solid var(--dark-lava);
+  border-radius: 5px;
   &:focus {
     background-color: #0c0b09;
-    border: none !important;
-    outline: none !important;
+    outline: none;
   }
   &::placeholder {
-    color: var(--axolo) !important;
+    color: var(--axolo);
+  }
+}
+
+.form-group {
+  input, textarea {
+    width: 100%;
   }
 }
 
@@ -63,11 +71,11 @@ h6 {
   color: var(--yellow);
 }
 
-body {
+html, body {
   font-family: var(--primary-font);
   background-color: var(--dark);
   color: white;
-  height: 5000px;
+  overflow-x: hidden;
 }
 
 .btn {
@@ -177,7 +185,7 @@ section {
     right: -25%;
     top: 0;
 
-    @media screen and (max-width: $mobile) {
+    @media screen and (max-width: 768px) {
       // Adjust the breakpoint as needed
       left: 50%;
       top: 50%;
@@ -297,7 +305,6 @@ section {
         @media screen and (max-width: $mobile) {
           width: 100px;
           height: 100px;
-          
         }
       }
       .card-title {
@@ -332,7 +339,8 @@ section {
       object-fit: cover;
     }
   }
-  p, li {
+  p,
+  li {
     font-size: 16px;
     @media screen and (max-width: $mobile) {
       font-size: 14px;
@@ -457,7 +465,7 @@ section {
     justify-content: center;
     font-size: 20px;
     background-color: var(--yellow);
- 
+
     border-radius: 50%;
     margin-right: 15px;
     margin-bottom: 10px;
@@ -482,15 +490,6 @@ section {
     line-height: 0;
     color: var(--axolo);
     text-decoration: none;
-  }
-
-  li:first-child {
-    .icon {
-      @media screen and (max-width: $mobile) {
-        width: 50px;
-        height: 50px;
-      }
-    }
   }
 }
 
@@ -522,7 +521,6 @@ footer {
     }
   }
 
-
   .nav-item {
     margin-bottom: 19px;
     i {
@@ -534,6 +532,58 @@ footer {
       text-decoration: none;
       &:hover {
         color: var(--yellow);
+      }
+    }
+  }
+}
+
+#faq {
+  .accordion-item {
+    margin-top: 12px;
+
+    .accordion-header {
+      .accordion-button {
+        display: flex;
+        width: 100%;
+        // background-color: green;
+        justify-content: space-between;
+        background-color: var(--dark-lava);
+        // width: fit-content;
+        border: 1px solid var(--axolo);
+        // border-bottom: none;
+        padding: 13px 10px;
+
+        &.active {
+          color: var(--yellow);
+          border-bottom: none;
+
+          i {
+            transform: rotate(180deg);
+            transition: transform 0.3s;
+          }
+        }
+        span {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          p {
+            display: inline-block;
+            margin: 0;
+          }
+          i {
+            transition: transform 0.3s;
+          }
+        }
+      }
+    }
+
+    .accordion-body {
+      background-color: var(--dark-lava);
+      border: 1px solid var(--axolo);
+      border-top: none;
+      padding: 10px;
+      p {
+        font-size: 16px;
       }
     }
   }

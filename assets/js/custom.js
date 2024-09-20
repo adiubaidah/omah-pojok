@@ -67,4 +67,18 @@ $(document).ready(function () {
       },
     },
   });
+
+  const accordionButtons = $('.accordion-button');
+
+  accordionButtons.each(function () {
+    $(this).on('click', function () {
+
+      if ($(this).hasClass('collapsed')) {
+        console.log('test')
+        $(this).removeClass('active');
+      } else {
+        $(this).addClass('active');
+      }
+    });
+  });
 });

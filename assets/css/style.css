@@ -35,22 +35,28 @@ button {
   --dark-lava: #454137;
 }
 
-.form-control {
-  outline: none !important;
+input, textarea {
+  outline: none;
   background-color: #0c0b09;
-  color: white !important;
+  color: white;
+  font-size: 14px;
+  padding: 10px 15px;
   border: 2px solid var(--dark-lava);
+  border-radius: 5px;
 }
-.form-control:focus {
+input:focus, textarea:focus {
   background-color: #0c0b09;
-  border: none !important;
-  outline: none !important;
+  outline: none;
 }
-.form-control::-moz-placeholder {
-  color: var(--axolo) !important;
+input::-moz-placeholder, textarea::-moz-placeholder {
+  color: var(--axolo);
 }
-.form-control::placeholder {
-  color: var(--axolo) !important;
+input::placeholder, textarea::placeholder {
+  color: var(--axolo);
+}
+
+.form-group input, .form-group textarea {
+  width: 100%;
 }
 
 h1,
@@ -63,11 +69,11 @@ h6 {
   color: var(--yellow);
 }
 
-body {
+html, body {
   font-family: var(--primary-font);
   background-color: var(--dark);
   color: white;
-  height: 5000px;
+  overflow-x: hidden;
 }
 
 .btn, .secondary-btn, .primary-btn {
@@ -170,7 +176,7 @@ section.overlayed::before {
   right: -25%;
   top: 0;
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
   #hero video {
     left: 50%;
     top: 50%;
@@ -325,11 +331,13 @@ section.overlayed::before {
   -o-object-fit: cover;
      object-fit: cover;
 }
-#ads p, #ads li {
+#ads p,
+#ads li {
   font-size: 16px;
 }
 @media screen and (max-width: 576px) {
-  #ads p, #ads li {
+  #ads p,
+  #ads li {
     font-size: 14px;
   }
 }
@@ -464,12 +472,6 @@ section.overlayed::before {
   color: var(--axolo);
   text-decoration: none;
 }
-@media screen and (max-width: 576px) {
-  #contact li:first-child .icon {
-    width: 50px;
-    height: 50px;
-  }
-}
 
 footer li {
   list-style: none;
@@ -508,4 +510,45 @@ footer .nav-item .nav-link {
 }
 footer .nav-item .nav-link:hover {
   color: var(--yellow);
+}
+
+#faq .accordion-item {
+  margin-top: 12px;
+}
+#faq .accordion-item .accordion-header .accordion-button {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  background-color: var(--dark-lava);
+  border: 1px solid var(--axolo);
+  padding: 13px 10px;
+}
+#faq .accordion-item .accordion-header .accordion-button.active {
+  color: var(--yellow);
+  border-bottom: none;
+}
+#faq .accordion-item .accordion-header .accordion-button.active i {
+  transform: rotate(180deg);
+  transition: transform 0.3s;
+}
+#faq .accordion-item .accordion-header .accordion-button span {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+#faq .accordion-item .accordion-header .accordion-button span p {
+  display: inline-block;
+  margin: 0;
+}
+#faq .accordion-item .accordion-header .accordion-button span i {
+  transition: transform 0.3s;
+}
+#faq .accordion-item .accordion-body {
+  background-color: var(--dark-lava);
+  border: 1px solid var(--axolo);
+  border-top: none;
+  padding: 10px;
+}
+#faq .accordion-item .accordion-body p {
+  font-size: 16px;
 }
