@@ -82,3 +82,8 @@ $(document).ready(function () {
     });
   });
 });
+
+
+const scrollSpy = new bootstrap.ScrollSpy(document.body, {
+  target: '#navbar'
+})

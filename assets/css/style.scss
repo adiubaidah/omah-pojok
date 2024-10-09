@@ -76,6 +76,7 @@ html, body {
   background-color: var(--dark);
   color: white;
   overflow-x: hidden;
+  background-image: url("../../images/bg-texture.png");
 }
 
 .btn {
@@ -176,6 +177,8 @@ section {
 #hero {
   min-height: 100vh;
   overflow: hidden;
+
+  background-image: url("../../images/bg-texture.png");
   video {
     position: absolute;
     object-fit: cover;
@@ -184,6 +187,7 @@ section {
     transform: rotate(90deg);
     right: -25%;
     top: 0;
+    filter: brightness(0.4); // Adjust the brightness as needed
 
     @media screen and (max-width: 768px) {
       // Adjust the breakpoint as needed
@@ -216,7 +220,7 @@ section {
   }
 }
 
-#about-us {
+#about {
   background-image: url("../..//images/about-bg.jpg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -348,7 +352,7 @@ section {
   }
 }
 
-#reservations {
+#reservation {
   form {
     padding: 20px;
     border-radius: 10px;
