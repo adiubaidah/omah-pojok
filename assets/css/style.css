@@ -35,7 +35,8 @@ button {
   --dark-lava: #454137;
 }
 
-input, textarea {
+input,
+textarea {
   outline: none;
   background-color: #0c0b09;
   color: white;
@@ -44,18 +45,21 @@ input, textarea {
   border: 2px solid var(--dark-lava);
   border-radius: 5px;
 }
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
   background-color: #0c0b09;
   outline: none;
 }
 input::-moz-placeholder, textarea::-moz-placeholder {
   color: var(--axolo);
 }
-input::placeholder, textarea::placeholder {
+input::placeholder,
+textarea::placeholder {
   color: var(--axolo);
 }
 
-.form-group input, .form-group textarea {
+.form-group input,
+.form-group textarea {
   width: 100%;
 }
 
@@ -69,7 +73,8 @@ h6 {
   color: var(--yellow);
 }
 
-html, body {
+html,
+body {
   font-family: var(--primary-font);
   background-color: var(--dark);
   color: white;
@@ -130,14 +135,33 @@ html, body {
   z-index: 1000;
   transition: position 0.7s ease-in-out;
 }
+.navbar.active {
+  background-color: var(--dark);
+}
 .navbar.fixed {
   position: fixed;
-  background-color: var(--dark);
   top: 0;
+  background-color: var(--dark);
 }
 @media screen and (max-width: 576px) {
   .navbar .reservation {
     margin-top: 20px;
+  }
+}
+
+.modal-content {
+  background-color: var(--dark);
+}
+.modal-content .modal-body {
+  overflow: hidden;
+}
+.modal-content img {
+  width: auto;
+  height: 26rem;
+}
+@media screen and (max-width: 576px) {
+  .modal-content img {
+    height: 20rem;
   }
 }
 
@@ -293,6 +317,12 @@ section.overlayed::before {
   flex-direction: column;
   align-items: center;
 }
+#menus .items .card p {
+  text-align: center;
+}
+#menus .items .card .card-image {
+  border-radius: 50%;
+}
 #menus .items .card .card-image img {
   -o-object-fit: cover;
      object-fit: cover;
@@ -301,6 +331,12 @@ section.overlayed::before {
   width: 150px;
   height: 150px;
   border-radius: 50%;
+  transform: scale(1);
+  transition: transform 0.5s;
+}
+#menus .items .card .card-image img:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
 }
 @media screen and (max-width: 576px) {
   #menus .items .card .card-image img {

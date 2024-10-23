@@ -83,6 +83,9 @@ $(document).ready(function () {
   });
 });
 
+const navbar = $("#navbar").click(function () {
+  $(this).toggleClass("active");
+});
 
 const scrollSpy = new bootstrap.ScrollSpy(document.body, {
   target: '#navbar'
