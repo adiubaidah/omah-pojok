@@ -533,6 +533,10 @@ section {
     line-height: 0;
     color: var(--axolo);
     text-decoration: none;
+
+    &:hover {
+      color: var(--yellow);
+    }
   }
 }
 
@@ -540,10 +544,16 @@ footer {
   li {
     list-style: none;
   }
+  a {
+    color: white;
+    text-decoration: none;
+    &:hover {
+      color: var(--yellow);
+    }
+  }
   .icons {
     a {
-      text-decoration: none;
-      background-color: #28251f;
+      
       border-radius: 50%;
       color: white;
       width: 36px;
@@ -554,10 +564,7 @@ footer {
       justify-content: center;
       transition: all 0.2s ease-out;
       margin-right: 7px;
-      &:hover {
-        background-color: var(--yellow);
-        color: var(--dark);
-      }
+     
       i {
         font-size: 18px;
       }
@@ -573,9 +580,6 @@ footer {
     .nav-link {
       font-size: 14px;
       text-decoration: none;
-      &:hover {
-        color: var(--yellow);
-      }
     }
   }
 }

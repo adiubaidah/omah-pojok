@@ -511,13 +511,21 @@ section.overlayed::before {
   color: var(--axolo);
   text-decoration: none;
 }
+#contact a:hover {
+  color: var(--yellow);
+}
 
 footer li {
   list-style: none;
 }
-footer .icons a {
+footer a {
+  color: white;
   text-decoration: none;
-  background-color: #28251f;
+}
+footer a:hover {
+  color: var(--yellow);
+}
+footer .icons a {
   border-radius: 50%;
   color: white;
   width: 36px;
@@ -528,10 +536,6 @@ footer .icons a {
   justify-content: center;
   transition: all 0.2s ease-out;
   margin-right: 7px;
-}
-footer .icons a:hover {
-  background-color: var(--yellow);
-  color: var(--dark);
 }
 footer .icons a i {
   font-size: 18px;
@@ -546,9 +550,6 @@ footer .nav-item i {
 footer .nav-item .nav-link {
   font-size: 14px;
   text-decoration: none;
-}
-footer .nav-item .nav-link:hover {
-  color: var(--yellow);
 }
 
 #faq .accordion-item {
